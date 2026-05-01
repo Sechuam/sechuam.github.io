@@ -3,95 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sechuam.dev | Full-Stack Developer</title>
+    <title>Chechu.dev | Full-Stack Developer</title>
     
-    <!-- SEO y Redes Sociales -->
-    <meta name="description" content="Portafolio de José Juan Lepe, Desarrollador Full-Stack especializado en Laravel, React y Blockchain.">
+    <!-- SEO y Meta Tags -->
+    <meta name="description" content="Portafolio profesional de José Juan Lepe.">
     <meta property="og:title" content="Chechu.dev | Full-Stack Developer">
-    <meta property="og:description" content="Explora mis proyectos y experiencia en desarrollo web moderno.">
-    <meta property="og:type" content="website">
     
-    <!-- Fuentes y Estilos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Icono de pestaña (Emoji) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 <body class="dark-mode">
-    <!-- Barra de progreso superior -->
     <div id="progress-bar"></div>
-    
-    <!-- Fondo con gradiente dinámico -->
     <div class="cursor-gradient"></div>
 
-    <!-- Botón Flotante de Tema -->
     <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
         <span class="sun">☀️</span>
         <span class="moon">🌙</span>
     </button>
 
     <div class="container">
-        <header>
+        <header class="reveal active">
             <div class="profile-mini">Sevilla, España</div>
-            <h1>Sechuam<span>.dev</span></h1>
+            <h1>Chechu<span>.dev</span></h1>
             <p class="subtitle"><span id="typewriter"></span><span class="cursor">|</span></p>
             
-            <div class="social-links">
-                <a href="https://github.com/Sechuam" target="_blank" class="btn">GitHub</a>
-                <a href="#contact" class="btn primary">Contratar</a>
-            </div>
+            <nav class="tab-nav">
+                <button class="tab-btn active" data-target="projects">Proyectos</button>
+                <button class="tab-btn" data-target="experience">Trayectoria</button>
+                <button class="tab-btn" data-target="about">Sobre mí</button>
+                <button class="tab-btn" data-target="contact">Contacto</button>
+            </nav>
         </header>
 
-        <section id="skills" class="reveal">
-            <h2>Habilidades</h2>
-            <div class="skills-container">
-                <div class="skill-tag">Laravel</div>
-                <div class="skill-tag">React</div>
-                <div class="skill-tag">Inertia.js</div>
-                <div class="skill-tag">Node.js</div>
-                <div class="skill-tag">Solidity</div>
-                <div class="skill-tag">Tailwind CSS</div>
-                <div class="skill-tag">PostgreSQL</div>
-                <div class="skill-tag">Git/GitHub</div>
-            </div>
-        </section>
-
-        <section id="projects" class="reveal">
-            <h2>Proyectos</h2>
+        <!-- SECCIÓN: PROYECTOS -->
+        <main id="projects" class="tab-content active reveal">
             <div class="project-grid">
+                <!-- Proyecto 1 -->
                 <article class="project-card">
                     <div class="project-icon">⛓️</div>
                     <h3>Vynco.io</h3>
                     <p>Certificados inteligentes en Blockchain. Emisión inmutable de títulos con Smart Contracts.</p>
                     <div class="tech-stack"><span>Solidity</span><span>Ethereum</span></div>
+                    <div class="project-links">
+                        <a href="https://github.com/Sechuam" class="link-btn github" target="_blank">Código</a>
+                        <a href="#" class="link-btn demo" target="_blank">Ver Demo</a>
+                    </div>
                 </article>
 
+                <!-- Proyecto 2 -->
                 <article class="project-card">
                     <div class="project-icon">📊</div>
                     <h3>Beca-Gest</h3>
-                    <p>Gestión administrativa de becas en entorno real con dashboard interactivo.</p>
+                    <p>Gestión administrativa de becas. Dashboard interactivo para control de datos en tiempo real.</p>
                     <div class="tech-stack"><span>Laravel</span><span>React</span></div>
+                    <div class="project-links">
+                        <a href="#" class="link-btn github" target="_blank">Código</a>
+                        <a href="#" class="link-btn demo" target="_blank">Ver Demo</a>
+                    </div>
                 </article>
 
+                <!-- Proyecto 3 -->
                 <article class="project-card">
                     <div class="project-icon">🎮</div>
                     <h3>Barcadia</h3>
-                    <p>App de geolocalización para ocio mediante integración de Maps API.</p>
+                    <p>App de geolocalización para ocio. Integración completa con Google Maps API.</p>
                     <div class="tech-stack"><span>JS</span><span>Maps API</span></div>
+                    <div class="project-links">
+                        <a href="#" class="link-btn github" target="_blank">Código</a>
+                        <a href="#" class="link-btn demo" target="_blank">Ver Demo</a>
+                    </div>
                 </article>
+            </div>
+        </main>
+
+        <!-- SECCIÓN: TRAYECTORIA -->
+        <section id="experience" class="tab-content reveal">
+            <h2>Experiencia y Estudios</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="date">2023 - Actualidad</span>
+                    <h4>Desarrollador Full-Stack Freelance</h4>
+                    <p>Creación de aplicaciones web modernas y contratos inteligentes para diversos clientes.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">2021 - 2023</span>
+                    <h4>Grado Superior DAW</h4>
+                    <p>IES Velázquez, Sevilla. Especialización en desarrollo de aplicaciones web.</p>
+                </div>
+                <!-- Añade más aquí -->
             </div>
         </section>
 
-        <section id="contact" class="reveal">
-            <h2>Contacto</h2>
+        <!-- SECCIÓN: SOBRE MÍ -->
+        <section id="about" class="tab-content reveal">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-container">
+                <div class="skill-tag">Laravel</div>
+                <div class="skill-tag">React.js</div>
+                <div class="skill-tag">Inertia.js</div>
+                <div class="skill-tag">Node.js</div>
+                <div class="skill-tag">Solidity</div>
+                <div class="skill-tag">PostgreSQL</div>
+                <div class="skill-tag">Tailwind CSS</div>
+                <div class="skill-tag">Git</div>
+            </div>
+            <div class="about-text">
+                <p>Soy un desarrollador apasionado por el código limpio y la arquitectura eficiente. Mi enfoque principal es unir la robustez del backend con experiencias de usuario fluidas.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CONTACTO -->
+        <section id="contact" class="tab-content reveal">
+            <h2>Hablemos</h2>
             <div class="contact-card">
                 <form action="https://formspree.io/f/xdaboqov" method="POST" id="contact-form">
                     <div class="form-group">
-                        <label>Tu Nombre</label>
-                        <input type="text" name="name" placeholder="¿Cómo te llamas?" required>
+                        <label>Nombre</label>
+                        <input type="text" name="name" placeholder="Tu nombre" required>
                     </div>
                     <div class="form-group">
                         <label>Email</label>
@@ -99,10 +128,10 @@
                     </div>
                     <div class="form-group">
                         <label>Mensaje</label>
-                        <textarea name="message" rows="4" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                        <textarea name="message" rows="5" placeholder="¿En qué puedo ayudarte?" required></textarea>
                     </div>
                     <button type="submit" id="submit-btn" class="btn primary full-width">
-                        <span class="btn-text">Enviar Propuesta</span>
+                        <span class="btn-text">Enviar Mensaje</span>
                     </button>
                 </form>
             </div>
