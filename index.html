@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chechu.dev | Full-Stack Developer</title>
+    
+    <!-- Meta Tags para SEO y Redes Sociales -->
+    <meta name="description" content="Portafolio de José Juan Lepe, Desarrollador Full-Stack especializado en Laravel, React y Blockchain.">
+    <meta property="og:title" content="Chechu.dev | Full-Stack Developer">
+    <meta property="og:description" content="Explora mis proyectos y experiencia en desarrollo web moderno.">
+    <meta property="og:type" content="website">
+    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon (puedes cambiar el emoji por una imagen real luego) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 <body class="dark-mode">
     <div class="cursor-gradient"></div>
 
-    <button id="theme-toggle" class="theme-btn">
+    <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
         <span class="sun">☀️</span>
         <span class="moon">🌙</span>
     </button>
 
     <div class="container">
         <header>
+            <div class="profile-mini">Sevilla, ES</div>
             <h1>Chechu<span>.dev</span></h1>
             <p class="subtitle"><span id="typewriter"></span><span class="cursor">|</span></p>
             
@@ -26,7 +37,7 @@
             </div>
         </header>
 
-        <section id="skills">
+        <section id="skills" class="reveal">
             <h2>Habilidades</h2>
             <div class="skills-container">
                 <div class="skill-tag">Laravel</div>
@@ -39,36 +50,35 @@
             </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="reveal">
             <h2>Proyectos</h2>
             <div class="project-grid">
                 <article class="project-card">
                     <div class="project-icon">⛓️</div>
                     <h3>Vynco.io</h3>
-                    <p>Certificados inteligentes en Blockchain. Emisión inmutable de títulos.</p>
+                    <p>Certificados inteligentes en Blockchain. Emisión inmutable de títulos con Smart Contracts.</p>
                     <div class="tech-stack"><span>Solidity</span><span>Ethereum</span></div>
                 </article>
 
                 <article class="project-card">
                     <div class="project-icon">📊</div>
                     <h3>Beca-Gest</h3>
-                    <p>Gestión administrativa de becas con dashboard en tiempo real.</p>
+                    <p>Gestión administrativa de becas en entorno real. Dashboard interactivo para gestión de datos.</p>
                     <div class="tech-stack"><span>Laravel</span><span>React</span></div>
                 </article>
 
                 <article class="project-card">
                     <div class="project-icon">🎮</div>
                     <h3>Barcadia</h3>
-                    <p>Localización de ocio interactivo mediante Google Maps API.</p>
+                    <p>App de geolocalización para ocio interactivo. Integración completa con Maps API.</p>
                     <div class="tech-stack"><span>JS</span><span>Maps API</span></div>
                 </article>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="reveal">
             <h2>Contacto</h2>
             <div class="contact-card">
-                <!-- Tu Endpoint real de Formspree ya configurado -->
                 <form action="https://formspree.io/f/xdaboqov" method="POST">
                     <div class="form-group">
                         <label>Tu Nombre</label>
@@ -88,7 +98,7 @@
         </section>
 
         <footer>
-            <p>© 2024 Chechu.dev — Sevilla, España</p>
+            <p>© 2024 Chechu.dev — Desarrollado con pasión en Sevilla</p>
         </footer>
     </div>
 
