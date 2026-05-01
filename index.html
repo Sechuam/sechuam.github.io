@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chechu.dev | Full-Stack Developer</title>
     
-    <!-- Meta Tags para SEO y Redes Sociales -->
+    <!-- Meta Tags para SEO -->
     <meta name="description" content="Portafolio de José Juan Lepe, Desarrollador Full-Stack especializado en Laravel, React y Blockchain.">
     <meta property="og:title" content="Chechu.dev | Full-Stack Developer">
     <meta property="og:description" content="Explora mis proyectos y experiencia en desarrollo web moderno.">
@@ -14,12 +14,17 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
-    <!-- Favicon (puedes cambiar el emoji por una imagen real luego) -->
+    <!-- Favicon Emoji -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 <body class="dark-mode">
+    <!-- Barra de progreso de lectura -->
+    <div id="progress-bar"></div>
+    
+    <!-- Efecto de luz dinámico -->
     <div class="cursor-gradient"></div>
 
+    <!-- Botón de cambio de tema -->
     <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
         <span class="sun">☀️</span>
         <span class="moon">🌙</span>
@@ -27,7 +32,7 @@
 
     <div class="container">
         <header>
-            <div class="profile-mini">Sevilla, ES</div>
+            <div class="profile-mini">Sevilla, España</div>
             <h1>Chechu<span>.dev</span></h1>
             <p class="subtitle"><span id="typewriter"></span><span class="cursor">|</span></p>
             
@@ -47,6 +52,7 @@
                 <div class="skill-tag">Solidity</div>
                 <div class="skill-tag">Tailwind CSS</div>
                 <div class="skill-tag">PostgreSQL</div>
+                <div class="skill-tag">Git/GitHub</div>
             </div>
         </section>
 
@@ -79,7 +85,8 @@
         <section id="contact" class="reveal">
             <h2>Contacto</h2>
             <div class="contact-card">
-                <form action="https://formspree.io/f/xdaboqov" method="POST">
+                <!-- Endpoint real configurado según imagen -->
+                <form action="https://formspree.io/f/xdaboqov" method="POST" id="contact-form">
                     <div class="form-group">
                         <label>Tu Nombre</label>
                         <input type="text" name="name" placeholder="¿Cómo te llamas?" required>
@@ -92,7 +99,9 @@
                         <label>Mensaje</label>
                         <textarea name="message" rows="4" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
                     </div>
-                    <button type="submit" class="btn primary full-width">Enviar Propuesta</button>
+                    <button type="submit" id="submit-btn" class="btn primary full-width">
+                        <span class="btn-text">Enviar Propuesta</span>
+                    </button>
                 </form>
             </div>
         </section>
