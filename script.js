@@ -1,57 +1,52 @@
-// 1. Escritura Automática
-const phrases = ["Full-Stack Developer", "Laravel Enthusiast", "Web3 Explorer", "UI/UX Driven"];
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+// 1. Navegación por Pestañas (Tabs)
+const tabs = document.querySelectorAll('.tab-btn');
+const contents = document.querySelectorAll('.tab-content');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.target;
+
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+
+        tab.classList.add('active');
+        const targetContent = document.getElementById(target);
+        targetContent.classList.add('active');
+        
+        // Reset de animaciones de scroll
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+
+// 2. Typewriter Effect
+const phrases = ["Full-Stack Developer", "Laravel & React Expert", "Blockchain Explorer"];
+let phraseIndex = 0, charIndex = 0, isDeleting = false;
 const typewriterEl = document.getElementById("typewriter");
 
 function type() {
-    const currentPhrase = phrases[phraseIndex];
-    if (isDeleting) {
-        typewriterEl.textContent = currentPhrase.substring(0, charIndex - 1);
-        charIndex--;
-    } else {
-        typewriterEl.textContent = currentPhrase.substring(0, charIndex + 1);
-        charIndex++;
-    }
-
-    let typeSpeed = isDeleting ? 40 : 80;
-    if (!isDeleting && charIndex === currentPhrase.length) {
-        isDeleting = true;
-        typeSpeed = 2500;
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        typeSpeed = 500;
-    }
-    setTimeout(type, typeSpeed);
+    const current = phrases[phraseIndex];
+    typewriterEl.textContent = isDeleting ? current.substring(0, charIndex--) : current.substring(0, charIndex++);
+    
+    if (!isDeleting && charIndex > current.length) { isDeleting = true; setTimeout(type, 2000); }
+    else if (isDeleting && charIndex === 0) { isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; setTimeout(type, 500); }
+    else { setTimeout(type, isDeleting ? 50 : 100); }
 }
 
-// 2. Luz de fondo y Barra de progreso
+// 3. Mouse Tracking (Gradient)
 document.addEventListener('mousemove', (e) => {
     document.documentElement.style.setProperty('--x', e.clientX + 'px');
     document.documentElement.style.setProperty('--y', e.clientY + 'px');
 });
 
+// 4. Progress Bar
 window.addEventListener('scroll', () => {
-    // Barra de progreso
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (winScroll / height) * 100;
-    const pb = document.getElementById("progress-bar");
-    if(pb) pb.style.width = scrolled + "%";
-
-    // Reveal de secciones
-    const reveals = document.querySelectorAll(".reveal");
-    reveals.forEach((el) => {
-        const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < window.innerHeight - 100) {
-            el.classList.add("active");
-        }
-    });
+    document.getElementById("progress-bar").style.width = scrolled + "%";
 });
 
-// 3. Tema y Feedback
+// 5. Theme Toggle
 const themeBtn = document.getElementById('theme-toggle');
 themeBtn.addEventListener('click', () => {
     const isDark = document.body.classList.toggle('dark-mode');
@@ -59,21 +54,9 @@ themeBtn.addEventListener('click', () => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
-const contactForm = document.getElementById('contact-form');
-const submitBtn = document.getElementById('submit-btn');
-
-if(contactForm) {
-    contactForm.addEventListener('submit', () => {
-        submitBtn.classList.add('btn-loading');
-        submitBtn.querySelector('.btn-text').textContent = 'Enviando';
-    });
-}
-
-// 4. Easter Egg para Reclutadores
+// 6. Easter Egg
 console.log("%c¡Hola reclutador! 👋", "color: #38bdf8; font-size: 20px; font-weight: bold;");
-console.log("Este código ha sido optimizado para rendimiento y SEO.");
 
-// Inicialización
 document.addEventListener('DOMContentLoaded', () => {
     type();
     if (localStorage.getItem('theme') === 'light') {
