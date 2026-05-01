@@ -1,4 +1,4 @@
-// 1. Efecto de Escritura Automática
+// 1. Escritura Automática
 const phrases = ["Full-Stack Developer", "Laravel Enthusiast", "Web3 Explorer", "UI/UX Driven"];
 let phraseIndex = 0;
 let charIndex = 0;
@@ -38,19 +38,20 @@ window.addEventListener('scroll', () => {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (winScroll / height) * 100;
-    document.getElementById("progress-bar").style.width = scrolled + "%";
+    const pb = document.getElementById("progress-bar");
+    if(pb) pb.style.width = scrolled + "%";
 
     // Reveal de secciones
     const reveals = document.querySelectorAll(".reveal");
     reveals.forEach((el) => {
         const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < window.innerHeight - 150) {
+        if (elementTop < window.innerHeight - 100) {
             el.classList.add("active");
         }
     });
 });
 
-// 3. Gestión de Temas y Feedback de Formulario
+// 3. Tema y Feedback
 const themeBtn = document.getElementById('theme-toggle');
 themeBtn.addEventListener('click', () => {
     const isDark = document.body.classList.toggle('dark-mode');
@@ -61,10 +62,16 @@ themeBtn.addEventListener('click', () => {
 const contactForm = document.getElementById('contact-form');
 const submitBtn = document.getElementById('submit-btn');
 
-contactForm.addEventListener('submit', () => {
-    submitBtn.classList.add('btn-loading');
-    submitBtn.querySelector('.btn-text').textContent = 'Enviando';
-});
+if(contactForm) {
+    contactForm.addEventListener('submit', () => {
+        submitBtn.classList.add('btn-loading');
+        submitBtn.querySelector('.btn-text').textContent = 'Enviando';
+    });
+}
+
+// 4. Easter Egg para Reclutadores
+console.log("%c¡Hola reclutador! 👋", "color: #38bdf8; font-size: 20px; font-weight: bold;");
+console.log("Este código ha sido optimizado para rendimiento y SEO.");
 
 // Inicialización
 document.addEventListener('DOMContentLoaded', () => {
