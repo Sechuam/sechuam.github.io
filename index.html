@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Chechu.dev</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chechu.dev | Full-Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Chechu<span>.dev</span></h1>
+            <p class="subtitle">Full-Stack Developer</p>
+            <div class="badges">
+                <span>Laravel</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Solidity</span>
+            </div>
+        </header>
 
-  <header>
-    <h1>Chechu.dev</h1>
-    <p>Full-Stack Developer</p>
-  </header>
+        <section id="about">
+            <h2>Sobre mí</h2>
+            <p>¡Hola! Me llamo <strong>José Juan Lepe</strong> y vivo en Sevilla. Actualmente estoy enfocado en desarrollo fullstack, trabajando con ecosistemas modernos como Laravel, Inertia y React, conectando interfaces pulidas con backends robustos en Node.js.</p>
+        </section>
 
-  <section>
-    <h2>Sobre mí</h2>
-    <p>¡Hola! Me llamo José Juan Lepe y vivo en Sevilla. Actualmente estoy enfocado en desarrollo fullstack, trabajando con Laravel, Inertia y React, conectando estilos con Tailwind y Node.js en backend.</p>
-  </section>
+        <section id="projects">
+            <h2>Proyectos Destacados</h2>
+            
+            <div class="project-grid">
+                <!-- Proyecto 1 -->
+                <article class="project-card">
+                    <div class="project-icon">⛓️</div>
+                    <h3>Vynco.io</h3>
+                    <p>Plataforma de certificados inteligentes basada en tecnología blockchain. Permite emitir y validar certificados de forma segura e inmutable.</p>
+                    <div class="tech-stack">
+                        <span>Solidity</span> <span>Ethereum</span> <span>Sepolia</span>
+                    </div>
+                </article>
 
-  <section>
-    <h2>Proyectos</h2>
+                <!-- Proyecto 2 -->
+                <article class="project-card">
+                    <div class="project-icon">📊</div>
+                    <h3>Beca-Gest</h3>
+                    <p>Sistema de gestión de becarios desarrollado en entorno real. Incluye panel de administración, seguimiento de estados y centralización de datos.</p>
+                    <div class="tech-stack">
+                        <span>Laravel</span> <span>Inertia</span> <span>React</span> <span>Tailwind</span>
+                    </div>
+                </article>
 
-    <div>
-      <h3>⛓️ Vynco.io</h3>
-      <p>Plataforma de certificados inteligentes basada en tecnología blockchain. Permite emitir, validar y almacenar certificados digitales de forma segura e inmutable utilizando smart contracts.</p>
-      <p><strong>Tecnologías:</strong> Solidity, Ethereum, Sepolia</p>
+                <!-- Proyecto 3 -->
+                <article class="project-card">
+                    <div class="project-icon">🎮</div>
+                    <h3>Barcadia</h3>
+                    <p>Aplicación web para descubrir bares con juegos (billar, dardos). Enfoque en geolocalización y experiencia de usuario interactiva.</p>
+                    <div class="tech-stack">
+                        <span>JS</span> <span>Maps API</span> <span>Frontend</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 Chechu.dev - Desarrollado con pasión desde Sevilla</p>
+        </footer>
     </div>
-
-    <div>
-      <h3>📊 Beca-Gest</h3>
-      <p>Sistema de gestión de becarios desarrollado en entorno real de prácticas. Permite administrar usuarios, realizar seguimiento de estados y centralizar la información en un panel intuitivo para administradores.</p>
-      <p><strong>Tecnologías:</strong> Laravel, Inertia, React, Tailwind</p>
-    </div>
-
-    <div>
-      <h3>🎮 Barcadia</h3>
-      <p>Aplicación web orientada a descubrir bares con recreativos (billar, futbolín, dardos, juegos de mesa). Proyecto enfocado en experiencia de usuario y geolocalización para encontrar ocio alternativo.</p>
-      <p><strong>Tecnologías:</strong> JavaScript, APIs de mapas, frontend interactivo</p>
-    </div>
-
-  </section>
-
 </body>
 </html>
