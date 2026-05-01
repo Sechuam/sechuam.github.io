@@ -1,4 +1,4 @@
-// 1. Configuración del Typewriter
+// 1. Efecto de Escritura Automática
 const phrases = ["Full-Stack Developer", "Laravel Enthusiast", "Web3 Explorer", "UI/UX Driven"];
 let phraseIndex = 0;
 let charIndex = 0;
@@ -27,26 +27,30 @@ function type() {
     setTimeout(type, typeSpeed);
 }
 
-// 2. Luz de fondo dinámica
+// 2. Luz de fondo y Barra de progreso
 document.addEventListener('mousemove', (e) => {
     document.documentElement.style.setProperty('--x', e.clientX + 'px');
     document.documentElement.style.setProperty('--y', e.clientY + 'px');
 });
 
-// 3. Scroll Reveal (Aparición de secciones)
-function reveal() {
+window.addEventListener('scroll', () => {
+    // Barra de progreso
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progress-bar").style.width = scrolled + "%";
+
+    // Reveal de secciones
     const reveals = document.querySelectorAll(".reveal");
     reveals.forEach((el) => {
-        const windowHeight = window.innerHeight;
         const elementTop = el.getBoundingClientRect().top;
-        const elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
+        if (elementTop < window.innerHeight - 150) {
             el.classList.add("active");
         }
     });
-}
+});
 
-// 4. Gestión de Temas
+// 3. Gestión de Temas y Feedback de Formulario
 const themeBtn = document.getElementById('theme-toggle');
 themeBtn.addEventListener('click', () => {
     const isDark = document.body.classList.toggle('dark-mode');
@@ -54,11 +58,17 @@ themeBtn.addEventListener('click', () => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
-// Al cargar la página
-window.addEventListener("scroll", reveal);
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+
+contactForm.addEventListener('submit', () => {
+    submitBtn.classList.add('btn-loading');
+    submitBtn.querySelector('.btn-text').textContent = 'Enviando';
+});
+
+// Inicialización
 document.addEventListener('DOMContentLoaded', () => {
     type();
-    reveal(); // Para chequear secciones visibles al inicio
     if (localStorage.getItem('theme') === 'light') {
         document.body.classList.replace('dark-mode', 'light-mode');
     }
