@@ -3,15 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chechu.dev | Full-Stack Developer</title>
-    
-    <!-- SEO y Meta Tags -->
+    <title>José Juan Lepe | Full-Stack Developer</title>
     <meta name="description" content="Portafolio profesional de José Juan Lepe.">
-    <meta property="og:title" content="Chechu.dev | Full-Stack Developer">
-    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 </head>
 <body class="dark-mode">
     <div id="progress-bar"></div>
@@ -23,83 +18,30 @@
     </button>
 
     <div class="container">
-        <header class="reveal active
+        <header class="reveal active">
             <div class="profile-container">
                 <img src="perfil.jpeg" alt="José Juan Lepe" class="profile-img">
+            </div>
             <div class="profile-mini">Sevilla, España</div>
-            <h1>Chechu<span>.dev</span></h1>
+            <!-- Tu nombre completo en lugar de Chechu.dev -->
+            <h1>José Juan <span>Lepe</span></h1>
             <p class="subtitle"><span id="typewriter"></span><span class="cursor">|</span></p>
             
             <nav class="tab-nav">
-                <button class="tab-btn active" data-target="projects">Proyectos</button>
+                <button class="tab-btn active" data-target="about">Sobre mí</button>
+                <button class="tab-btn" data-target="projects">Proyectos</button>
                 <button class="tab-btn" data-target="experience">Trayectoria</button>
-                <button class="tab-btn" data-target="about">Sobre mí</button>
                 <button class="tab-btn" data-target="contact">Contacto</button>
             </nav>
         </header>
 
-        <!-- SECCIÓN: PROYECTOS -->
-        <main id="projects" class="tab-content active reveal">
-            <div class="project-grid">
-                <!-- Proyecto 1 -->
-                <article class="project-card">
-                    <div class="project-icon">⛓️</div>
-                    <h3>Vynco.io</h3>
-                    <p>Certificados inteligentes en Blockchain. Emisión inmutable de títulos con Smart Contracts.</p>
-                    <div class="tech-stack"><span>Solidity</span><span>Ethereum</span></div>
-                    <div class="project-links">
-                        <a href="https://github.com/Sechuam/Vynco.io" class="link-btn github" target="_blank">Código</a>
-                        <a href="#" class="link-btn demo" target="_blank">Ver Demo</a>
-                    </div>
-                </article>
-
-                <!-- Proyecto 2 -->
-                <article class="project-card">
-                    <div class="project-icon">📊</div>
-                    <h3>Beca-Gest</h3>
-                    <p>Gestión administrativa de becas. Dashboard interactivo para control de datos en tiempo real.</p>
-                    <div class="tech-stack"><span>Laravel</span><span>React</span></div>
-                    <div class="project-links">
-                        <a href="https://github.com/Sechuam/gestion-becarios" class="link-btn github" target="_blank">Código</a>
-                        <a href="#" class="link-btn demo" target="_blank">Ver Demo</a>
-                    </div>
-                </article>
-
-                <!-- Proyecto 3 -->
-                <article class="project-card">
-                    <div class="project-icon">🎮</div>
-                    <h3>Barcadea</h3>
-                    <p>App de geolocalización para ocio. Integración completa con Google Maps API.</p>
-                    <div class="tech-stack"><span>JS</span><span>Maps API</span></div>
-                    <div class="project-links">
-                        <a href="https://github.com/Sechuam/Barcadea" class="link-btn github" target="_blank">Código</a>
-                        <a href="#" class="link-btn demo" target="_blank">Ver Demo</a>
-                    </div>
-                </article>
+        <!-- SECCIÓN: SOBRE MÍ (Ahora primero y texto arriba) -->
+        <section id="about" class="tab-content active reveal">
+            <div class="about-text">
+                <p>Desarrollador Full-Stack especializado en la convergencia de las arquitecturas web modernas y los ecosistemas descentralizados. Con una sólida base técnica en las pilas de <strong>Laravel, Inertia.js y React</strong>, destaco en el diseño de soluciones escalables que integran una lógica de negocio compleja con la seguridad inmutable de la tecnología blockchain.</p>
+                <p>Mi enfoque está orientado a los resultados y da prioridad a la optimización de procesos mediante el desarrollo de aplicaciones de página única (SPA) de alto rendimiento y la implementación de protocolos criptográficos avanzados.</p>
             </div>
-        </main>
-
-        <!-- SECCIÓN: TRAYECTORIA -->
-        <section id="experience" class="tab-content reveal">
-            <h2>Experiencia y Estudios</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="date">2026 - Actualidad</span>
-                    <h4>Desarrollador Full-Stack (Contrato en prácticas)</h4>
-                    <p>Creación de aplicación web para gestionar sistemas de becarios de manera rápida y eficaz.</p>
-                </div>
-                <div class="timeline-item">
-                    <span class="date">2024 - 2026</span>
-                    <h4>Grado Superior DAW</h4>
-                    <p>CFGS CESUR, Sevilla. Especialización en desarrollo de aplicaciones web.</p>
-                </div>
-                <!-- Añade más aquí -->
-            </div>
-        </section>
-
-        <!-- SECCIÓN: SOBRE MÍ -->
-        <section id="about" class="tab-content reveal">
-            <h2>Habilidades Técnicas</h2>
+            <h3>Habilidades Técnicas</h3>
             <div class="skills-container">
                 <div class="skill-tag">Laravel</div>
                 <div class="skill-tag">React.js</div>
@@ -112,13 +54,85 @@
                 <div class="skill-tag">Git</div>
                 <div class="skill-tag">IA</div>
             </div>
-            <div class="about-text">
-                <p>Desarrollador Full-Stack especializado en la convergencia de las arquitecturas web modernas y los ecosistemas descentralizados. Con una sólida base técnica en las pilas de Laravel, Inertia.js y React, destaco en el diseño de soluciones escalables que integran una lógica de negocio compleja con la seguridad inmutable de la tecnología blockchain. Mi enfoque está orientado a los resultados y da prioridad a la optimización de procesos mediante el desarrollo de aplicaciones de página única (SPA) de alto rendimiento y la implementación de protocolos criptográficos avanzados.
-.</p>
+        </section>
+
+        <!-- SECCIÓN: PROYECTOS (Ahora segundo y con tarjetas mejoradas) -->
+        <main id="projects" class="tab-content reveal">
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="card-header">
+                        <span class="project-icon">⛓️</span>
+                        <div class="card-title">
+                            <h3>Vynco.io</h3>
+                            <span class="status">En producción</span>
+                        </div>
+                    </div>
+                    <p>Certificados inteligentes en Blockchain. Emisión inmutable de títulos con Smart Contracts y verificación en tiempo real.</p>
+                    <div class="tech-stack">
+                        <span>Solidity</span><span>Ethereum</span><span>Web3</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Sechuam/Vynco.io" class="link-btn github" target="_blank">Repositorio</a>
+                        <a href="#" class="link-btn demo" target="_blank">Demo Vivo</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-header">
+                        <span class="project-icon">📊</span>
+                        <div class="card-title">
+                            <h3>Beca-Gest</h3>
+                            <span class="status">Interno</span>
+                        </div>
+                    </div>
+                    <p>Dashboard administrativo para gestión de becas. Optimización de flujos de trabajo y visualización de datos complejos.</p>
+                    <div class="tech-stack">
+                        <span>Laravel</span><span>React</span><span>PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Sechuam/gestion-becarios" class="link-btn github" target="_blank">Repositorio</a>
+                        <a href="#" class="link-btn demo" target="_blank">Demo Vivo</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-header">
+                        <span class="project-icon">🎮</span>
+                        <div class="card-title">
+                            <h3>Barcadea</h3>
+                            <span class="status">MVP</span>
+                        </div>
+                    </div>
+                    <p>Plataforma de geolocalización para entusiastas del ocio. Integración profunda con servicios de mapas y geocercas.</p>
+                    <div class="tech-stack">
+                        <span>JavaScript</span><span>Google Maps API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Sechuam/Barcadea" class="link-btn github" target="_blank">Repositorio</a>
+                        <a href="#" class="link-btn demo" target="_blank">Demo Vivo</a>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- TRAYECTORIA -->
+        <section id="experience" class="tab-content reveal">
+            <h2>Experiencia y Estudios</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="date">2026 - Actualidad</span>
+                    <h4>Desarrollador Full-Stack (Prácticas)</h4>
+                    <p>Creación de aplicación web para gestionar sistemas de becarios de manera rápida y eficaz.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">2024 - 2026</span>
+                    <h4>Grado Superior DAW</h4>
+                    <p>CFGS CESUR, Sevilla. Especialización en desarrollo de aplicaciones web.</p>
+                </div>
             </div>
         </section>
 
-        <!-- SECCIÓN: CONTACTO -->
+        <!-- SECCIÓN: CONTACTO (Con espacio extra) -->
         <section id="contact" class="tab-content reveal">
             <h2>Hablemos</h2>
             <div class="contact-card">
@@ -135,18 +149,15 @@
                         <label>Mensaje</label>
                         <textarea name="message" rows="5" placeholder="¿En qué puedo ayudarte?" required></textarea>
                     </div>
-                    <button type="submit" id="submit-btn" class="btn primary full-width">
-                        <span class="btn-text">Enviar Mensaje</span>
-                    </button>
+                    <button type="submit" class="btn primary full-width">Enviar Mensaje</button>
                 </form>
             </div>
         </section>
 
         <footer>
-            <p>© 2024 Chechu.dev — Sevilla, ES</p>
+            <p>© 2024 José Juan Lepe — Sevilla, ES</p>
         </footer>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
