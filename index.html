@@ -5,71 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chechu.dev | Full-Stack Developer</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fuente moderna -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Efecto de luz que sigue al ratón -->
+    <div class="cursor-gradient"></div>
+
     <div class="container">
         <header>
             <h1>Chechu<span>.dev</span></h1>
-            <p class="subtitle"><span id="typewriter"></span></p>
+            <p class="subtitle"><span id="typewriter"></span><span class="cursor">|</span></p>
+            
             <div class="badges">
                 <span>Laravel</span>
                 <span>React</span>
                 <span>Node.js</span>
                 <span>Solidity</span>
             </div>
+
             <div class="social-links">
                 <a href="https://github.com/Sechuam" target="_blank" class="btn">GitHub</a>
-                <a href="https://linkedin.com/in/TU_USUARIO" target="_blank" class="btn">LinkedIn</a>
+                <a href="#" target="_blank" class="btn">LinkedIn</a>
                 <a href="mailto:tu-email@ejemplo.com" class="btn primary">Contactar</a>
             </div>
         </header>
 
         <section id="about">
             <h2>Sobre mí</h2>
-            <p>¡Hola! Me llamo <strong>José Juan Lepe</strong> y vivo en Sevilla. Actualmente estoy enfocado en desarrollo fullstack, trabajando con ecosistemas modernos como Laravel, Inertia y React, conectando interfaces pulidas con backends robustos en Node.js.</p>
+            <p>¡Hola! Me llamo <strong>José Juan Lepe</strong> y vivo en Sevilla. Actualmente estoy enfocado en desarrollo fullstack, trabajando con <strong>Laravel, Inertia y React</strong>, conectando estilos con Tailwind y robustez en Node.js.</p>
         </section>
 
         <section id="projects">
             <h2>Proyectos Destacados</h2>
-            
             <div class="project-grid">
-                <!-- Proyecto 1 -->
                 <article class="project-card">
                     <div class="project-icon">⛓️</div>
                     <h3>Vynco.io</h3>
-                    <p>Plataforma de certificados inteligentes basada en tecnología blockchain. Permite emitir y validar certificados de forma segura e inmutable.</p>
+                    <p>Plataforma de certificados inteligentes basada en tecnología blockchain. Emisión y validación segura e inmutable.</p>
                     <div class="tech-stack">
-                        <span>Solidity</span> <span>Ethereum</span> <span>Sepolia</span>
+                        <span>Solidity</span> <span>Ethereum</span>
                     </div>
                 </article>
 
-                <!-- Proyecto 2 -->
                 <article class="project-card">
                     <div class="project-icon">📊</div>
                     <h3>Beca-Gest</h3>
-                    <p>Sistema de gestión de becarios desarrollado en entorno real. Incluye panel de administración, seguimiento de estados y centralización de datos.</p>
+                    <p>Gestión de becarios en entorno real. Panel administrativo con seguimiento de estados y centralización de datos.</p>
                     <div class="tech-stack">
-                        <span>Laravel</span> <span>Inertia</span> <span>React</span> <span>Tailwind</span>
+                        <span>Laravel</span> <span>React</span>
                     </div>
                 </article>
 
-                <!-- Proyecto 3 -->
                 <article class="project-card">
                     <div class="project-icon">🎮</div>
                     <h3>Barcadia</h3>
-                    <p>Aplicación web para descubrir bares con juegos (billar, dardos). Enfoque en geolocalización y experiencia de usuario interactiva.</p>
+                    <p>App de geolocalización para encontrar ocio alternativo (billares, dardos) con experiencia interactiva.</p>
                     <div class="tech-stack">
-                        <span>JS</span> <span>Maps API</span> <span>Frontend</span>
+                        <span>JS</span> <span>Maps API</span>
                     </div>
                 </article>
             </div>
         </section>
 
         <footer>
-            <p>© 2024 Chechu.dev - Desarrollado con pasión desde Sevilla</p>
+            <p>© 2024 Chechu.dev — Sevilla, España</p>
         </footer>
     </div>
+
+    <!-- Script al final para que cargue después del HTML -->
+    <script src="script.js"></script>
 </body>
 </html>
