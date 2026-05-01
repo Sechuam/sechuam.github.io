@@ -68,16 +68,21 @@
         <section id="contact">
             <h2>Contacto</h2>
             <div class="contact-card">
-                <form action="https://formspree.io/f/tu_id_aqui" method="POST">
+                <!-- Tu Endpoint real de Formspree ya configurado -->
+                <form action="https://formspree.io/f/xdaboqov" method="POST">
+                    <div class="form-group">
+                        <label>Tu Nombre</label>
+                        <input type="text" name="name" placeholder="¿Cómo te llamas?" required>
+                    </div>
                     <div class="form-group">
                         <label>Email</label>
                         <input type="email" name="email" placeholder="tu@email.com" required>
                     </div>
                     <div class="form-group">
                         <label>Mensaje</label>
-                        <textarea name="message" rows="4" placeholder="¿En qué puedo ayudarte?" required></textarea>
+                        <textarea name="message" rows="4" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
                     </div>
-                    <button type="submit" class="btn primary full-width">Enviar Mensaje</button>
+                    <button type="submit" class="btn primary full-width">Enviar Propuesta</button>
                 </form>
             </div>
         </section>
