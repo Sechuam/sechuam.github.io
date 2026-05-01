@@ -135,3 +135,29 @@ footer {
 @media (max-width: 600px) {
     h1 { font-size: 2.5rem; }
 }
+.social-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: var(--bg-color);
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
